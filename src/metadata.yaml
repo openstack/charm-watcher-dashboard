@@ -1,7 +1,7 @@
 name: watcher-dashboard
 display-name: Watcher Dashboard
 summary: OpenStack resource optimization Dashboard
-maintainer: Stamatis Katsaounis <skatsaounis@admin.grnet.gr>
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
 description: |
   This is the dashboard for the OpenStack resource optimization
   service, Watcher.

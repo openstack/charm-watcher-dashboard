@@ -1,6 +1,7 @@
 # Overview
 
-This charm is developed by Stamatis Katsaounis <skatsaounis@admin.grnet.gr> and it is based on the official
-OpenStack Charms project.
+This charm is developed as part of the OpenStack Charms project, and as such you
+should refer to the [OpenStack Charm Development Guide](https://github.com/openstack/charm-guide) for details on how
+to contribute to this charm.
 
-You can find its source code here: <https://github.com/grnet/charm-watcher-dashboard>.
+You can find its source code here: <https://github.com/openstack/charm-watcher-dashboard>.

@@ -1,0 +1,51 @@
+series: bionic
+relations:
+- - mysql:shared-db
+  - keystone:shared-db
+- - mysql:shared-db
+  - openstack-dashboard:shared-db
+- - mysql:shared-db
+  - watcher:shared-db
+- - keystone:identity-service
+  - watcher:identity-service
+- - keystone:identity-service
+  - openstack-dashboard:identity-service
+- - openstack-dashboard:dashboard-plugin
+  - watcher-dashboard:dashboard
+- - rabbitmq-server:amqp
+  - watcher:amqp
+applications:
+  keystone:
+    charm: cs:~openstack-charmers-next/keystone
+    num_units: 1
+    options:
+      openstack-origin: cloud:bionic-ussuri/proposed
+  mysql:
+    constraints: mem=3072M
+    charm: cs:~openstack-charmers-next/percona-cluster
+    num_units: 1
+  openstack-dashboard:
+     series: bionic
+     charm: cs:~openstack-charmers-next/openstack-dashboard
+     num_units: 1
+     options:
+       openstack-origin: cloud:bionic-ussuri/proposed
+  rabbitmq-server:
+    charm: cs:~openstack-charmers-next/rabbitmq-server
+    num_units: 1
+  watcher:
+    series: bionic
+    charm: cs:~openstack-charmers-next/watcher
+    num_units: 1
+    options:
+      openstack-origin: cloud:bionic-ussuri/proposed
+      datasources: gnocchi
+      planner: weight
+      planner-config: >
+        {
+            "weights": "change_node_power_state:9,change_nova_service_state:50,migrate:30,nop:70,resize:20,sleep:40,turn_host_to_acpi_s3_state:10,volume_migrate:60",
+            "parallelization": "change_node_power_state:2,change_nova_service_state:1,migrate:2,nop:1,resize:2,sleep:1,turn_host_to_acpi_s3_state:2,volume_migrate:2"
+        }
+  watcher-dashboard:
+     series: bionic
+     charm: ../../../watcher-dashboard

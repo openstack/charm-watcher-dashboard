@@ -31,6 +31,10 @@ charm.use_defaults(
 def dashboard_available():
     """Relation to OpenStack Dashboard principal charm complete.
     """
-    # config and restart is handled by package install, just update our status
     with charm.provide_charm_instance() as watcher_dashboard_charm:
+        dashboard_relation = reactive.endpoint_from_flag('dashboard.available')
+        dashboard_relation.publish_plugin_info(
+            "", None,
+            conflicting_packages=watcher_dashboard_charm.purge_packages,
+            install_packages=watcher_dashboard_charm.packages)
         watcher_dashboard_charm.assess_status()

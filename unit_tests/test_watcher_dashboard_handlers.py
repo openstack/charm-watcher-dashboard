@@ -51,7 +51,15 @@ class TestWatcherDashboardHandlers(test_utils.PatchHelper):
         self.provide_charm_instance().__enter__.return_value = \
             self.watcher_dashboard_charm
         self.provide_charm_instance().__exit__.return_value = None
+        self.patch('charms.reactive.endpoint_from_flag')
 
     def test_dashboard_available(self):
+        mock_flag = mock.Mock()
+        self.endpoint_from_flag.return_value = mock_flag
+        self.watcher_dashboard_charm.purge_packages = ['n1']
+        self.watcher_dashboard_charm.packages = ['p1', 'p2']
         handlers.dashboard_available()
         self.watcher_dashboard_charm.assess_status.assert_called_once_with()
+        mock_flag.publish_plugin_info.assert_called_once_with(
+            "", None, conflicting_packages=['n1'],
+            install_packages=['p1', 'p2'])

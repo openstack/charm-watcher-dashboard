@@ -2,6 +2,8 @@
 
 This subordinate charm provides the Watcher Dashboard plugin for use with the OpenStack Dashboard.
 
+OpenStack Ussuri or later is required.
+
 # Usage
 
 Example minimal deploy:
@@ -13,9 +15,9 @@ Example minimal deploy:
 
 # Bugs
 
-Please report bugs on [GitHub](https://github.com/grnet/charm-watcher-dashboard/issues).
+Please report bugs on [Launchpad][lp-bugs-charm-watcher-dashboard].
 
-For general questions please refer to the OpenStack [Charm Guide](https://docs.openstack.org/charm-guide/latest/).
+For general questions please refer to the OpenStack [Charm Guide][cg].
 
 # Contact Information
 
@@ -24,6 +26,13 @@ know that, so include that information here:
 
 ## OpenStack Watcher
 
-- [Watcher](https://wiki.openstack.org/wiki/Watcher)
-- [Watcher Bugs](https://launchpad.net/watcher)
+- [Watcher][wiki-watcher]
+- [Watcher Bugs][lp-bugs-watcher]
 - Watcher IRC on freenode at #openstack-watcher
+
+<!-- LINKS -->
+
+[cg]: https://docs.openstack.org/charm-guide
+[lp-bugs-charm-watcher-dashboard]: https://bugs.launchpad.net/charm-watcher-dashboard/+filebug
+[lp-bugs-watcher]: https://launchpad.net/watcher
+[wiki-watcher]: https://wiki.openstack.org/wiki/Watcher

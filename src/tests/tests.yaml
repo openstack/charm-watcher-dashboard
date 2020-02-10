@@ -1,0 +1,9 @@
+charm_name: watcher-dashboard
+gate_bundles:
+- bionic-ussuri
+smoke_bundles:
+- bionic-ussuri
+configure:
+- zaza.charm_tests.noop.setup.basic_setup
+tests:
+- zaza.charm_tests.noop.tests.NoopTest

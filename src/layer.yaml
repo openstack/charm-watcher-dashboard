@@ -1,7 +1,7 @@
 includes:
   - layer:openstack
   - interface:dashboard-plugin
-repo: https://github.com/grnet/charm-watcher-dashboard
+repo: https://github.com/openstack/charm-watcher-dashboard
 options:
   basic:
     use_venv: True

@@ -2,12 +2,15 @@ charm_name: watcher-dashboard
 gate_bundles:
 - bionic-ussuri
 - focal-ussuri
+- focal-victoria
 smoke_bundles:
-- bionic-ussuri
+- focal-ussuri
 configure:
 - zaza.charm_tests.noop.setup.basic_setup
 tests:
 - zaza.charm_tests.noop.tests.NoopTest
+dev_bundles:
+- groovy-victoria
 tests_options:
   force_deploy:
-    - focal-ussuri
+    - groovy-victoria

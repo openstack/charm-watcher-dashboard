@@ -28,7 +28,7 @@ know that, so include that information here:
 
 - [Watcher][wiki-watcher]
 - [Watcher Bugs][lp-bugs-watcher]
-- Watcher IRC on freenode at #openstack-watcher
+- Watcher IRC on OFTC at #openstack-watcher
 
 <!-- LINKS -->
 

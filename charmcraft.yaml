@@ -1,0 +1,28 @@
+type: charm
+
+parts:
+  charm:
+    plugin: reactive
+    build-packages:
+      - tox
+      - git
+    source: src/
+    build-packages:
+      - python3-dev
+    build-snaps:
+      - charm
+    build-environment:
+      - CHARM_INTERFACES_DIR: $CRAFT_PROJECT_DIR/interfaces/
+      - CHARM_LAYERS_DIR: $CRAFT_PROJECT_DIR/layers/
+bases:
+  - build-on:
+      - name: ubuntu
+        channel: "22.04"
+        architectures: [amd64]
+    run-on:
+      - name: ubuntu
+        channel: "22.04"
+        architectures: [amd64, arm64, ppc64el, s390x]
+      - name: ubuntu
+        channel: "23.04"
+        architectures: [amd64, arm64, ppc64el, s390x]

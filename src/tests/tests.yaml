@@ -1,11 +1,13 @@
 charm_name: watcher-dashboard
 gate_bundles:
-- jammy-zed
 - jammy-antelope
+- jammy-bobcat
 - lunar-antelope
+- mantic-bobcat
 
 smoke_bundles:
 - jammy-antelope
+- jammy-bobcat
 
 configure:
 - zaza.charm_tests.noop.setup.basic_setup

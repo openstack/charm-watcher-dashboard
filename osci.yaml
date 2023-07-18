@@ -6,4 +6,4 @@
       needs_charm_build: true
       charm_build_name: watcher-dashboard
       build_type: charmcraft
-      charmcraft_channel: "2.2/stable"
+      charmcraft_channel: 2.x/stable

@@ -6,9 +6,8 @@ parts:
     build-packages:
       - tox
       - git
-    source: src/
-    build-packages:
       - python3-dev
+    source: src/
     build-snaps:
       - charm
     build-environment:
@@ -22,7 +21,4 @@ bases:
     run-on:
       - name: ubuntu
         channel: "22.04"
-        architectures: [amd64, arm64, ppc64el, s390x]
-      - name: ubuntu
-        channel: "23.04"
         architectures: [amd64, arm64, ppc64el, s390x]

@@ -2,7 +2,6 @@ charm_name: watcher-dashboard
 gate_bundles:
 - jammy-antelope
 - jammy-bobcat
-- lunar-antelope
 - mantic-bobcat
 
 smoke_bundles:

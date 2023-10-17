@@ -6,11 +6,10 @@ description: |
   This is the dashboard for the OpenStack resource optimization
   service, Watcher.
 tags:
-  - openstack
+- openstack
 series:
-  - jammy
-  - lunar
-  - mantic
+- jammy
+- mantic
 subordinate: true
 requires:
   dashboard:

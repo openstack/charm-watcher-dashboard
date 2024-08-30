@@ -7,8 +7,6 @@ description: |
   service, Watcher.
 tags:
   - openstack
-series:
-  - jammy
 subordinate: true
 requires:
   dashboard:

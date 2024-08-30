@@ -1,10 +1,8 @@
 charm_name: watcher-dashboard
 gate_bundles:
-  - jammy-antelope
-  - jammy-bobcat
-  - jammy-caracal
+  - noble-caracal
 smoke_bundles:
-  - jammy-caracal
+  - noble-caracal
 configure:
   - zaza.charm_tests.noop.setup.basic_setup
 

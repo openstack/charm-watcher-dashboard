@@ -3,22 +3,24 @@ type: charm
 parts:
   charm:
     plugin: reactive
+    reactive-charm-build-arguments:
+      - --use-lock-file-branches
     build-packages:
       - tox
       - git
       - python3-dev
     source: src/
     build-snaps:
-      - charm
+      - charm/3.x/stable
     build-environment:
       - CHARM_INTERFACES_DIR: $CRAFT_PROJECT_DIR/interfaces/
       - CHARM_LAYERS_DIR: $CRAFT_PROJECT_DIR/layers/
-bases:
-  - build-on:
-      - name: ubuntu
-        channel: "22.04"
-        architectures: [amd64]
-    run-on:
-      - name: ubuntu
-        channel: "22.04"
-        architectures: [amd64, arm64, ppc64el, s390x]
+platforms:
+  ubuntu@22.04:amd64:
+  ubuntu@22.04:arm64:
+  ubuntu@22.04:ppc64el:
+  ubuntu@22.04:s390x:
+  ubuntu@24.04:amd64:
+  ubuntu@24.04:arm64:
+  ubuntu@24.04:ppc64el:
+  ubuntu@24.04:s390x:

@@ -16,13 +16,13 @@ certifi==2024.2.2
     # via requests
 cffi==1.16.0
     # via cryptography
-charm-tools==3.0.7
+charm-tools @ git+https://github.com/juju/charm-tools.git
     # via -r requirements.in
 charmhelpers==1.2.1
     # via charms-reactive
 charms-openstack @ git+https://github.com/openstack/charms.openstack.git@stable/caracal
     # via -r test-requirements.in
-charms-reactive==1.5.2
+charms-reactive @ git+https://github.com/canonical/charms.reactive.git
     # via -r test-requirements.in
 charset-normalizer==3.3.2
     # via requests
@@ -148,7 +148,6 @@ types-setuptools==69.5.0.20240423
     # via requirements-parser
 urllib3==2.2.1
     # via requests
-vergit==1.0.2
     # via charm-tools
 virtualenv==20.26.1
     # via charm-tools

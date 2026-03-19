@@ -12,7 +12,7 @@ charmhelpers==1.2.1
     # via charms-reactive
 charms-openstack @ git+https://github.com/openstack/charms.openstack.git@stable/caracal
     # via -r test-requirements.in
-charms-reactive==1.5.2
+charms-reactive @ git+https://github.com/canonical/charms.reactive.git
     # via -r test-requirements.in
 cliff==4.6.0
     # via stestr
@@ -36,6 +36,11 @@ netaddr==0.10.1
     # via
     #   -c /home/alex/Projects/Canonical/git/github.com/openstack-charmers/release-tools/global/constraints-2024.1.txt
     #   charmhelpers
+netifaces==0.11.0
+    # via
+    #   openstacksdk
+    #   oslo-utils
+    #   python-octaviaclient
 pbr==6.0.0
     # via
     #   charmhelpers

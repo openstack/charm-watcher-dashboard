@@ -84,7 +84,7 @@ applications:
       - '6'
 
   watcher-dashboard:
-    charm: ../../../watcher-dashboard.charm
+    charm: ../../../watcher-dashboard_ubuntu@24.04-amd64.charm
 
 relations:
 

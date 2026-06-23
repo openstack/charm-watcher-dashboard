@@ -1,1 +1,1 @@
-charm-tools
+git+https://github.com/juju/charm-tools.git

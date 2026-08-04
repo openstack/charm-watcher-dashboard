@@ -34,7 +34,7 @@ colander==1.8.3
     # via charm-tools
 coverage==7.14.1
     # via -r test-requirements.in
-cryptography==3.3.2
+cryptography==50.0.0
     # via
     #   -r test-requirements.in
     #   secretstorage
@@ -162,7 +162,6 @@ six==1.17.0
     #   blessings
     #   cliff
     #   cmd2
-    #   cryptography
 stestr==4.2.1
     # via -r test-requirements.in
 stevedore==5.8.0
